@@ -1,0 +1,14 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+option java_package = "com.sdia.stubs";
+
+service RadarService{
+  rpc DetectInfraction(DetectRequest) returns (google.protobuf.Empty);
+}
+
+message DetectRequest{
+  int64 radarId = 1;
+  string vehicleId = 2;
+  double speed = 3;
+}
+
